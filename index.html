@@ -4,8 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/cedb47a170.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+    <!--------------------- nav-menu ----------------------------------->
+    <nav>
+
+        <div class="nav-left">
+            <img src="images/logo_facebook.png">
+            <div class="search">
+                <div><i class="fa-solid fa-magnifying-glass"></i></div>
+                <input type="text" placeholder="Search">
+            </div>
+        </div>
+
+        <div class="nav-midel">
+            <ul>
+                <a href="index.html"><li class="active" id="btn-midel-1" onclick="actionActive_1()"><i class="fa-solid fa-house"></i></li></a>
+                <a href="#"><li class="inactive" id="btn-midel-2" onclick="actionActive_2()"><i class="fa-solid fa-tv"></i></li></a>
+                <a href="#"><li class="inactive" id="btn-midel-3" onclick="actionActive_3()"><i class="fa-solid fa-store"></i></li></a>
+                <a href="#"><li class="inactive" id="btn-midel-4" onclick="actionActive_4()"><i class="fa-solid fa-users"></i></li></a>
+                <a href="#"><li class="inactive" id="btn-midel-5" onclick="actionActive_5()"><i class="fa-solid fa-gamepad"></i></li></a>
+            </ul>
+        </div>
+
+        <div class="nav-right">
+            <ul>
+                <li><i class="fa-solid fa-bars"></i></li>
+                <a href="#" class="icone-message"><li ><i class="fa-regular fa-comment"></i></li></a>
+                <a href="#" class="icone-notif"><li ><i class="fa-regular fa-bell"></i></li></a>
+            </ul>
+            <img src="images/profile_pic_2.png">
+        </div>
+        
+    </nav>
+
+    <!--------------------- END nav-menu ----------------------------------->
+
+    <!--------------------- container ----------------------------------->
+
+    <div class="container">
+        <aside class="aside-left"></aside>
+        <main class="main-content"></main>
+        <aside class="aside-right"></aside>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
