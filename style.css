@@ -1,17 +1,24 @@
 *{
     padding: 0;
     margin: 0;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'poppins', sans-serif;
     box-sizing: border-box;
 }
 
 /****************************** nav-menu  *************************/
+body{
+    background: #efefef;
+}
 
 nav{
     padding: 5px 1%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 100;
+    background: #fff;
+    position: sticky;
+    top: 0;
 }
 
 .nav-left{
@@ -154,3 +161,201 @@ nav{
 
 
 
+/****************************** aside-left  *************************/
+
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 1%;
+    flex-wrap: wrap;
+    background: #efefef;
+}
+
+.aside-left{
+    flex-basis: 18%;
+    position: sticky;
+    align-self: flex-start;
+    top: 80px;
+}
+
+.aside-left a{
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+    padding-left: 10px;
+    width: 325px;
+    height: 50px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.aside-left a:first-child img{
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+}
+
+.aside-left a img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.aside-left a i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #e7e0e0;
+}
+
+.aside-left a span{
+    padding-left: 9px;
+    color: #363434;
+}
+
+.aside-left a:hover{
+    background: #ccc
+}
+
+
+/****************************** aside-right  *************************/
+
+.aside-right{
+    flex-basis: 18%;
+    position: sticky;
+    top: 80px;
+    align-self: flex-start;
+    overflow-y: scroll;
+    height: 88vh;
+}
+
+.aside-right-title{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    color: #363434;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.aside-right-title-right{
+    cursor: pointer;
+}
+   
+
+.aside-right-title-right span:first-child{
+    padding-right: 20px;
+}
+
+.aside-right-title-right span:last-child{
+    padding-right: 20px;
+}
+
+.aside-right-member{
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.aside-right-member a{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    width: 325px;
+    height: 50px;
+    border-radius: 10px;
+    text-decoration: none;
+    position: relative;
+}
+
+.aside-right-member a img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+
+.aside-right-member a span,
+.aside-right-groupe a span
+{
+    padding-left: 10px;
+    color: #363434;
+    font-size: 15px;
+}
+
+.aside-right-member a:hover{
+    background: #ccc
+}
+
+.aside-right-member a::before{
+    position: absolute;
+    content: "";
+    width: 7px;
+    height: 7px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background: #41db51;
+    top: 35px;
+    left: 35px;
+    z-index: 1;
+}
+
+.aside-right-groupe a{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    width: 325px;
+    height: 50px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.aside-right-groupe a div img{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.aside-right-groupe a div{
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.aside-right-groupe a div img:nth-child(1){
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.aside-right-groupe a div img:nth-child(2){
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.aside-right-groupe a .online::before{
+    position: absolute;
+    content: "";
+    width: 8px;
+    height: 8px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background: #41db51;
+    bottom: 0;
+    right: 0;
+}
+
+
+/****************************** main-content  *************************/
+
+.main-content{
+    flex-basis: 35%;
+    background:orange;
+}
