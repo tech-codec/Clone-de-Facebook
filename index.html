@@ -6,50 +6,177 @@
     <title>Document</title>
     <script src="https://kit.fontawesome.com/cedb47a170.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="srcipt.js" async></script>
+    <script src="carrousel.js" async></script>
+    <script src="modal.js" async></script>
 </head>
 <body>
-
-    <!--------------------- nav-menu ----------------------------------->
-    <nav>
-
-        <div class="nav-left">
+    <nav class="nav_bar">
+        <div class="nav_bar_left">
             <img src="images/logo_facebook.png">
             <div class="search">
-                <div><i class="fa-solid fa-magnifying-glass"></i></div>
-                <input type="text" placeholder="Search">
+                <div class="logo_search"><i class="fa-solid fa-magnifying-glass"></i></div>
+                <input type="text" class="search_input" placeholder="Recherche sur facebook">
             </div>
         </div>
-
-        <div class="nav-midel">
+        <div class="nav_bar_midel">
             <ul>
-                <a href="index.html"><li class="active" id="btn-midel-1" onclick="actionActive_1()"><i class="fa-solid fa-house"></i></li></a>
-                <a href="#"><li class="inactive" id="btn-midel-2" onclick="actionActive_2()"><i class="fa-solid fa-tv"></i></li></a>
-                <a href="#"><li class="inactive" id="btn-midel-3" onclick="actionActive_3()"><i class="fa-solid fa-store"></i></li></a>
-                <a href="#"><li class="inactive" id="btn-midel-4" onclick="actionActive_4()"><i class="fa-solid fa-users"></i></li></a>
-                <a href="#"><li class="inactive" id="btn-midel-5" onclick="actionActive_5()"><i class="fa-solid fa-gamepad"></i></li></a>
+                <a href="#"><li class="active" id="btn-midel-1" onclick="onActivate_1()"><i class="fa-solid fa-house"></i></li></a>
+                <a href="#"><li class="inactive" id="btn-midel-2" onclick="onActivate_2()"><i class="fa-solid fa-tv"></i></li></a>
+                <a href="#"><li class="inactive" id="btn-midel-3" onclick="onActivate_3()"><i class="fa-solid fa-store"></i></li></a>
+                <a href="#"><li class="inactive" id="btn-midel-4" onclick="onActivate_4()"><i class="fa-solid fa-users"></i></li></a>
+                <a href="#"><li class="inactive" id="btn-midel-5" onclick="onActivate_5()"><i class="fa-solid fa-gamepad"></i></li></a>
             </ul>
         </div>
-
-        <div class="nav-right">
+        <div class="nav_bar_rigth">
             <ul>
-                <li><i class="fa-solid fa-bars"></i></li>
+                <a href="#"><li><i class="fa-solid fa-bars"></i></li></a>
                 <a href="#" class="icone-message"><li ><i class="fa-regular fa-comment"></i></li></a>
                 <a href="#" class="icone-notif"><li ><i class="fa-regular fa-bell"></i></li></a>
             </ul>
-            <img src="images/profile_pic_2.png">
-        </div>
+            <img id="show_sous_menu" src="images/profile_pic_2.png" onclick="onShow_sous_menu()">
         
+        </div>
+
+        <div class="sous_menu hidden">
+
+            <div class="profile">
+                <div>
+                    <button><img src="images/profile_pic_2.png"><span>Christinne jolie</span></button>
+                </div>
+                <button>Voir tous les profils</button>
+                
+            </div>
+
+            <div class="menu_setting">
+                <button>
+                    <div><img src="images/setting.png"><span>Paramètres et confidentialités</span></div>
+                    <img src="images/arrow.png">
+                </button>
+                <button>
+                    <div><img src="images/help.png"><span>Aide et assistance</span></div>
+                    <img src="images/arrow.png">
+                </button>
+                <button>
+                    <div><img src="images/display.png"><span>Affichage et accessibilité</span></div>
+                    <img src="images/arrow.png">
+                </button>
+                <button>
+                    <div><img src="images/feedback.png"><span>Donner votre avis</span></div>
+                    <img src="images/arrow.png">
+                </button>
+                <button>
+                    <div><img src="images/logout.png"><span>Se déconnecter</span></div>
+                    <img src="images/arrow.png">
+                </button>
+                
+            </div>
+
+        </div>
+
+        <div class="sous_search hidden">
+
+            <div class="sous_search_all">
+                <div class="close_sous_search"><i class="fa-solid fa-arrow-left"></i></div>
+                <div class="second_search">
+                    <input id="second_search_focus" type="text" placeholder="Rechseche sur facebook">
+                </div>
+            </div>
+
+            <div class="sous_search_titel">
+                <span>Récent</span>
+                <span>Modifier</span>
+            </div>
+
+            <div class="sous_search_people">
+                
+                <div class="sous_search_people_right">
+                    <img src="images/member-1.png">
+                    <div class="friend_name">
+                        <p>Liam Robinson</p>
+                        <p>Ami(e)</p>
+                    </div>
+                </div>
+
+                <div class="sous_search_people_left"><i class="fa-solid fa-xmark"></i></div>
+            </div>
+
+            <div class="sous_search_people">
+                
+                <div class="sous_search_people_right">
+                    <img src="images/member-2.png">
+                    <div class="friend_name">
+                        <p>Liam Robinson</p>
+                        <p>Ami(e)</p>
+                    </div>
+                </div>
+
+                <div class="sous_search_people_left"><i class="fa-solid fa-xmark"></i></div>
+            </div>
+
+
+            <div class="sous_search_people">
+                
+                <div class="sous_search_people_right">
+                    <img src="images/member-3.png">
+                    <div class="friend_name">
+                        <p>Liam Robinson</p>
+                        <p>Ami(e)</p>
+                    </div>
+                </div>
+
+                <div class="sous_search_people_left"><i class="fa-solid fa-xmark"></i></div>
+            </div>
+
+            <div class="sous_search_people">
+                
+                <div class="sous_search_people_right">
+                    <img src="images/member-4.png">
+                    <div class="friend_name">
+                        <p>Liam Robinson</p>
+                        <p>Ami(e)</p>
+                    </div>
+                </div>
+
+                <div class="sous_search_people_left"><i class="fa-solid fa-xmark"></i></div>
+            </div>
+
+            <div class="sous_search_people">
+                
+                <div class="sous_search_people_right">
+                    <img src="images/member-5.png">
+                    <div class="friend_name">
+                        <p>Liam Robinson</p>
+                        <p>Ami(e)</p>
+                    </div>
+                </div>
+
+                <div class="sous_search_people_left"><i class="fa-solid fa-xmark"></i></div>
+            </div>
+
+            <div class="sous_search_people">
+                
+                <div class="sous_search_people_right">
+                    <img src="images/member-6.png">
+                    <div class="friend_name">
+                        <p>Liam Robinson</p>
+                        <p>Ami(e)</p>
+                    </div>
+                </div>
+
+                <div class="sous_search_people_left"><i class="fa-solid fa-xmark"></i></div>
+            </div>
+
+        </div>
+
     </nav>
 
-    <!--------------------- END nav-menu ----------------------------------->
-
-    <!--------------------- container ----------------------------------->
-
+    <!---------------     container     -->
     <div class="container">
 
-        <!--------------------- aside-left ----------------------------------->
+         <!---------------     aside_left     ------------------------>
 
-        <aside class="aside-left">
+        <aside class="aside_left">
             <a href=""><img src="images/profile_pic_2.png"> <span>Christinne jolie</span></a>
             <a href=""><img src="images/icon_ami_side_left_index.png"> <span>Ami(e)s</span></a>
             <a href=""><img src="images/icon_souvenirs_side_left_index.png"> <span>Souvenirs</span></a>
@@ -65,16 +192,562 @@
         </aside>
 
 
-        <!--------------------- main-content ----------------------------------->
+        <!---------------     main_content     ------------------------>
 
-        <main class="main-content">
+        <main class="main_content">
+
+            <!----------------- carousel story -------------------------------------->
+            <div class="container_story">
+
+                <div class="carousel_prev">
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+
+                <div class="carousel">
+
+                    <div class="carousel_item">
+                        <div class="item item_1">
+                            <div class="add_statu">
+                                <span id="item_statu_plus"><i class="fa-solid fa-plus"></i></span>
+                                <span id="name_user">Créer une story</span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="carousel_item">
+                        <div class="item item_2">
+                            <div class="item_cercle">
+                                <img src="images/add_friend-1.png">
+                            </div>
+                            <span>Olivia Johnson</span>
+                        </div>
+                    </div>
+                    <div class="carousel_item">
+                        <div class="item item_3">
+                            <div class="item_cercle">
+                                <img src="images/add_friend-2.png">
+                            </div>
+                            <span>Lucas Miller</span>
+                        </div>
+                    </div>
+                    <div class="carousel_item">
+                        <div class="item item_4">
+                            <div class="item_cercle">
+                                <img src="images/add_friend-3.png">
+                            </div>
+                            <span>Sophia Anderson</span>
+                        </div>
+                    </div>
+                    <div class="carousel_item">
+                        <div class="item item_5">
+                            <div class="item_cercle">
+                                <img src="images/add_friend-4.png">
+                            </div>
+                            <span>Isabella Taylor</span> 
+                        </div>
+                    </div>
+                    <div class="carousel_item">
+                        <div class="item item_6">
+                            <div class="item_cercle">
+                                <img src="images/add_friend-5.png">
+                            </div>
+                            <span>Ethan Davis</span>
+                        </div>
+                    </div>
+                    <div class="carousel_item">
+                        <div class="item item_7">
+                            <div class="item_cercle">
+                                <img src="images/add_friend-6.png">
+                            </div>
+                            <span>Emma Martinez</span>
+                        </div>
+                    </div>
+                    <div class="carousel_item">
+                        <div class="item item_8">
+                            <div class="item_cercle">
+                                <img src="images/add_friend-7.png">
+                            </div>
+                            <span>Jackson Turner</span>
+                        </div>
+                    </div>
+                    <div class="carousel_item">
+                        <div class="item item_9">
+                            <div class="item_cercle">
+                                <img src="images/add_friend-8.png">
+                            </div>
+                            <span>Liam Robinson</span>
+                        </div>
+                    </div>
+                    <div class="carousel_item">
+                        <div class="item item_10">
+                            <div class="item_cercle">
+                                <img src="images/add_friend-9.png">
+                            </div>
+                            <span>Chloe Miller</span>
+                        </div>
+                    </div>
+                    <div class="carousel_item">
+                        <div class="item item_11">
+                            <div class="item_cercle">
+                                <img src="images/add_friend-10.png">
+                            </div>
+                            <span>Mason Lee</span>
+                        </div>
+                    </div>
+                    <div class="carousel_item">
+                        <div class="item item_12">
+                            <div class="item_cercle">
+                                <img src="images/add_friend-11.png">
+                            </div>
+                            <span>Lily Perez</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="carousel_next">
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+
+            </div>
+
             
+            <div class="publi_post">
+
+                <div class="new_post">
+                    <img src="images/profile_pic_2.png">
+                    <button type="button"> Quoi de neuf Christinne jolie</button>
+                </div>
+                <div class="new_post_icon">
+                    <button><img src="images/live-video.png"> <span>Vidéo en direct</span></button>
+                    <button><img src="images/icon_photo_video_contain_index.png"> <span>Photo / vidéo</span></button>
+                    <button><img src="images/feeling.png"> <span>Humeur / activité</span></button>
+                </div>
+            </div>
+
+
+            <div class="post_container">
+
+                <div class="post_profile">
+                    <div class="post_profile_description">
+                        <img src="images/member-1.png">
+                        <div class="profile_name_day">
+                            <a>Sophia Anderson</a>
+                            <a> 5 j <i class="fa-solid fa-earth-americas"></i></a>
+                        </div>
+                    </div>
+    
+                    <div class="post_ellipse_close">
+                        <div><i class="fa-solid fa-ellipsis"></i></div>
+                        <div><i class="fa-solid fa-xmark"></i></div>
+                    </div>
+
+                </div>
+
+                <p class="post-text"> 
+                    Lorem Ipsum est tout simplement un faux texte de l’industrie 
+                    de l’imprimerie et de la composition. Lorem Ipsum est le texte 
+                    factice standard de l'industrie depuis les années 1500, lorsqu'un 
+                    imprimeur inconnu a pris une galerie de caractères et l'a brouillée 
+                    pour en faire un livre de spécimens de caractères.
+                </p>
+                
+                <img src="images/post-1.png">
+
+                <div class="post_liker_comment">
+
+                    <div class="liker">
+                        <img src="images/like-blue.png">
+                        <img src="images/coeur-rouge-1.png">
+                        <span>  4 k</span>
+                    </div>
+
+                    <div class="comments_shares">
+                        <span class="comments">237 commentaires</span>
+                        <span class="shares">128 partages</span>
+                    </div>
+                    
+                </div>
+
+                <div class="share_like__comment">
+                    <a class="like"><img src="images/like.png"> J'aime</a>
+                    <a href="#modal_1" class="comment btn_show"><img src="images/comments.png"> Commenter</a>
+                    <a class="share"><img src="images/share.png"> Partager</a>
+                </div>
+
+            </div>
+
+            <div class="post_container">
+
+                <div class="post_profile">
+                    <div class="post_profile_description">
+                        <img src="images/member-2.png">
+                        <div class="profile_name_day">
+                            <a>Sophia Anderson</a>
+                            <a> 5 j <i class="fa-solid fa-earth-americas"></i></a>
+                        </div>
+                    </div>
+    
+                    <div class="post_ellipse_close">
+                        <div><i class="fa-solid fa-ellipsis"></i></div>
+                        <div><i class="fa-solid fa-xmark"></i></div>
+                    </div>
+
+                </div>
+
+                <p class="post-text"> 
+                    Lorem Ipsum est tout simplement un faux texte de l’industrie 
+                    de l’imprimerie et de la composition. Lorem Ipsum est le texte 
+                    factice standard de l'industrie depuis les années 1500, lorsqu'un 
+                    imprimeur inconnu a pris une galerie de caractères et l'a brouillée 
+                    pour en faire un livre de spécimens de caractères.
+                </p>
+                
+                <img src="images/post-2.png">
+
+                <div class="post_liker_comment">
+
+                    <div class="liker">
+                        <img src="images/like-blue.png">
+                        <img src="images/coeur-rouge-1.png">
+                        <span>  4 k</span>
+                    </div>
+
+                    <div class="comments_shares">
+                        <span class="comments">237 commentaires</span>
+                        <span class="shares">128 partages</span>
+                    </div>
+                    
+                </div>
+
+                <div class="share_like__comment">
+                    <a class="like"><img src="images/like.png"> J'aime</a>
+                    <a href="#modal_1" class="comment btn_show"><img src="images/comments.png"> Commenter</a>
+                    <a class="share"><img src="images/share.png"> Partager</a>
+                </div>
+
+            </div>
+
+
+            <div class="post_container">
+
+                <div class="post_profile">
+                    <div class="post_profile_description">
+                        <img src="images/member-3.png">
+                        <div class="profile_name_day">
+                            <a>Sophia Anderson</a>
+                            <a> 5 j <i class="fa-solid fa-earth-americas"></i></a>
+                        </div>
+                    </div>
+    
+                    <div class="post_ellipse_close">
+                        <div><i class="fa-solid fa-ellipsis"></i></div>
+                        <div><i class="fa-solid fa-xmark"></i></div>
+                    </div>
+
+                </div>
+
+                <p class="post-text"> 
+                    Lorem Ipsum est tout simplement un faux texte de l’industrie 
+                    de l’imprimerie et de la composition. Lorem Ipsum est le texte 
+                    factice standard de l'industrie depuis les années 1500, lorsqu'un 
+                    imprimeur inconnu a pris une galerie de caractères et l'a brouillée 
+                    pour en faire un livre de spécimens de caractères.
+                </p>
+                
+                <img src="images/post-3.png">
+
+                <div class="post_liker_comment">
+
+                    <div class="liker">
+                        <img src="images/like-blue.png">
+                        <img src="images/coeur-rouge-1.png">
+                        <span>  4 k</span>
+                    </div>
+
+                    <div class="comments_shares">
+                        <span class="comments">237 commentaires</span>
+                        <span class="shares">128 partages</span>
+                    </div>
+                    
+                </div>
+
+                <div class="share_like__comment">
+                    <a class="like"><img src="images/like.png"> J'aime</a>
+                    <a href="#modal_1" class="comment btn_show"><img src="images/comments.png"> Commenter</a>
+                    <a class="share"><img src="images/share.png"> Partager</a>
+                </div>
+
+            </div>
+
+
+            <div class="post_container">
+
+                <div class="post_profile">
+                    <div class="post_profile_description">
+                        <img src="images/member-4.png">
+                        <div class="profile_name_day">
+                            <a>Sophia Anderson</a>
+                            <a> 5 j <i class="fa-solid fa-earth-americas"></i></a>
+                        </div>
+                    </div>
+    
+                    <div class="post_ellipse_close">
+                        <div><i class="fa-solid fa-ellipsis"></i></div>
+                        <div><i class="fa-solid fa-xmark"></i></div>
+                    </div>
+
+                </div>
+
+                <p class="post-text"> 
+                    Lorem Ipsum est tout simplement un faux texte de l’industrie 
+                    de l’imprimerie et de la composition. Lorem Ipsum est le texte 
+                    factice standard de l'industrie depuis les années 1500, lorsqu'un 
+                    imprimeur inconnu a pris une galerie de caractères et l'a brouillée 
+                    pour en faire un livre de spécimens de caractères.
+                </p>
+                
+                <img src="images/post-4.png">
+
+                <div class="post_liker_comment">
+
+                    <div class="liker">
+                        <img src="images/like-blue.png">
+                        <img src="images/coeur-rouge-1.png">
+                        <span>  4 k</span>
+                    </div>
+
+                    <div class="comments_shares">
+                        <span class="comments">237 commentaires</span>
+                        <span class="shares">128 partages</span>
+                    </div>
+                    
+                </div>
+
+                <div class="share_like__comment">
+                    <a class="like"><img src="images/like.png"> J'aime</a>
+                    <a href="#modal_1" class="comment btn_show"><img src="images/comments.png"> Commenter</a>
+                    <a class="share"><img src="images/share.png"> Partager</a>
+                </div>
+
+            </div>
+
+
+            <div class="post_container">
+
+                <div class="post_profile">
+                    <div class="post_profile_description">
+                        <img src="images/member-5.png">
+                        <div class="profile_name_day">
+                            <a>Sophia Anderson</a>
+                            <a> 5 j <i class="fa-solid fa-earth-americas"></i></a>
+                        </div>
+                    </div>
+    
+                    <div class="post_ellipse_close">
+                        <div><i class="fa-solid fa-ellipsis"></i></div>
+                        <div><i class="fa-solid fa-xmark"></i></div>
+                    </div>
+
+                </div>
+
+                <p class="post-text"> 
+                    Lorem Ipsum est tout simplement un faux texte de l’industrie 
+                    de l’imprimerie et de la composition. Lorem Ipsum est le texte 
+                    factice standard de l'industrie depuis les années 1500, lorsqu'un 
+                    imprimeur inconnu a pris une galerie de caractères et l'a brouillée 
+                    pour en faire un livre de spécimens de caractères.
+                </p>
+                
+                <img src="images/post-5.png">
+
+                <div class="post_liker_comment">
+
+                    <div class="liker">
+                        <img src="images/like-blue.png">
+                        <img src="images/coeur-rouge-1.png">
+                        <span>  4 k</span>
+                    </div>
+
+                    <div class="comments_shares">
+                        <span class="comments">237 commentaires</span>
+                        <span class="shares">128 partages</span>
+                    </div>
+                    
+                </div>
+
+                <div class="share_like__comment">
+                    <a class="like"><img src="images/like.png"> J'aime</a>
+                    <a href="#modal_1" class="comment btn_show"><img src="images/comments.png"> Commenter</a>
+                    <a class="share"><img src="images/share.png"> Partager</a>
+                </div>
+
+            </div>
+
+
+            <div class="post_container">
+
+                <div class="post_profile">
+                    <div class="post_profile_description">
+                        <img src="images/member-6.png">
+                        <div class="profile_name_day">
+                            <a>Sophia Anderson</a>
+                            <a> 5 j <i class="fa-solid fa-earth-americas"></i></a>
+                        </div>
+                    </div>
+    
+                    <div class="post_ellipse_close">
+                        <div><i class="fa-solid fa-ellipsis"></i></div>
+                        <div><i class="fa-solid fa-xmark"></i></div>
+                    </div>
+
+                </div>
+
+                <p class="post-text"> 
+                    Lorem Ipsum est tout simplement un faux texte de l’industrie 
+                    de l’imprimerie et de la composition. Lorem Ipsum est le texte 
+                    factice standard de l'industrie depuis les années 1500, lorsqu'un 
+                    imprimeur inconnu a pris une galerie de caractères et l'a brouillée 
+                    pour en faire un livre de spécimens de caractères.
+                </p>
+                
+                <img src="images/post-6.png">
+
+                <div class="post_liker_comment">
+
+                    <div class="liker">
+                        <img src="images/like-blue.png">
+                        <img src="images/coeur-rouge-1.png">
+                        <span>  4 k</span>
+                    </div>
+
+                    <div class="comments_shares">
+                        <span class="comments">237 commentaires</span>
+                        <span class="shares">128 partages</span>
+                    </div>
+                    
+                </div>
+
+                <div class="share_like__comment">
+                    <a class="like"><img src="images/like.png"> J'aime</a>
+                    <a href="#modal_1" class="comment btn_show"><img src="images/comments.png"> Commenter</a>
+                    <a class="share"><img src="images/share.png"> Partager</a>
+                </div>
+
+            </div>
+
+
+            <div class="post_container">
+
+                <div class="post_profile">
+                    <div class="post_profile_description">
+                        <img src="images/member-7.png">
+                        <div class="profile_name_day">
+                            <a>Sophia Anderson</a>
+                            <a> 5 j <i class="fa-solid fa-earth-americas"></i></a>
+                        </div>
+                    </div>
+    
+                    <div class="post_ellipse_close">
+                        <div><i class="fa-solid fa-ellipsis"></i></div>
+                        <div><i class="fa-solid fa-xmark"></i></div>
+                    </div>
+
+                </div>
+
+                <p class="post-text"> 
+                    Lorem Ipsum est tout simplement un faux texte de l’industrie 
+                    de l’imprimerie et de la composition. Lorem Ipsum est le texte 
+                    factice standard de l'industrie depuis les années 1500, lorsqu'un 
+                    imprimeur inconnu a pris une galerie de caractères et l'a brouillée 
+                    pour en faire un livre de spécimens de caractères.
+                </p>
+                
+                <img src="images/post-7.png">
+
+                <div class="post_liker_comment">
+
+                    <div class="liker">
+                        <img src="images/like-blue.png">
+                        <img src="images/coeur-rouge-1.png">
+                        <span>  4 k</span>
+                    </div>
+
+                    <div class="comments_shares">
+                        <span class="comments">237 commentaires</span>
+                        <span class="shares">128 partages</span>
+                    </div>
+                    
+                </div>
+
+                <div class="share_like__comment">
+                    <a class="like"><img src="images/like.png"> J'aime</a>
+                    <a href="#modal_1" class="comment btn_show"><img src="images/comments.png"> Commenter</a>
+                    <a class="share"><img src="images/share.png"> Partager</a>
+                </div>
+
+            </div>
+
+
+            <div class="post_container">
+
+                <div class="post_profile">
+                    <div class="post_profile_description">
+                        <img src="images/member-8.png">
+                        <div class="profile_name_day">
+                            <a>Sophia Anderson</a>
+                            <a> 5 j <i class="fa-solid fa-earth-americas"></i></a>
+                        </div>
+                    </div>
+    
+                    <div class="post_ellipse_close">
+                        <div><i class="fa-solid fa-ellipsis"></i></div>
+                        <div><i class="fa-solid fa-xmark"></i></div>
+                    </div>
+
+                </div>
+
+                <p class="post-text"> 
+                    Lorem Ipsum est tout simplement un faux texte de l’industrie 
+                    de l’imprimerie et de la composition. Lorem Ipsum est le texte 
+                    factice standard de l'industrie depuis les années 1500, lorsqu'un 
+                    imprimeur inconnu a pris une galerie de caractères et l'a brouillée 
+                    pour en faire un livre de spécimens de caractères.
+                </p>
+                
+                <img src="images/post-8.png">
+
+                <div class="post_liker_comment">
+
+                    <div class="liker">
+                        <img src="images/like-blue.png">
+                        <img src="images/coeur-rouge-1.png">
+                        <span>  4 k</span>
+                    </div>
+
+                    <div class="comments_shares">
+                        <span class="comments">237 commentaires</span>
+                        <span class="shares">128 partages</span>
+                    </div>
+                    
+                </div>
+
+                <div class="share_like__comment">
+                    <a class="like"><img src="images/like.png"> J'aime</a>
+                    <a href="#modal_1" class="comment btn_show"><img src="images/comments.png"> Commenter</a>
+                    <a class="share"><img src="images/share.png"> Partager</a>
+                </div>
+
+            </div>
+
+
         </main>
 
 
-        <!--------------------- aside-right ----------------------------------->
 
-        <aside class="aside-right">
+        <!---------------     aside_rigth     ------------------------>
+
+        <aside class="aside_rigth">
 
             <div class="aside-right-title">
                 <div class="aside-right-title-left">
@@ -101,12 +774,12 @@
                 <a href=""><img src="images/member-12.png"> <span>Lily Perez</span></a>
             </div>
 
-
             <div class="aside-right-title">
                 <div class="aside-right-title-left">
                     <span>Conversations de groupe</span>
                 </div>
             </div>
+
 
             <div class="aside-right-groupe">
 
@@ -130,12 +803,187 @@
                     </div>
                     <span>Spring boot</span>
                 </a>
-
+                <a href=""><i class="fa-solid fa-plus"></i> <span>Créer un nouveau groupe</span></a>
             </div>
 
         </aside>
     </div>
 
-    <script src="script.js"></script>
+
+        <!-------------------------        Boîte de dialogue                   ---------------------->
+                
+        <div class="hidden" id="modal_1" role="dialog" aria-hidden="true" aria-labelledby="modal_label" >
+
+
+            <div class="post_modal">
+
+                <div class="post_modal_title">
+                    <div id="modal_label"><h3>Publication de Sophia Anderson</h3></div>
+                    <div id="modal_close" class="close_modal"><i class="fa-solid fa-xmark"></i></div>
+                </div>
+
+                <div class="post_container">
+        
+                    <div class="post_profile">
+                        <div class="post_profile_description">
+                            <img src="images/member-1.png">
+                            <div class="profile_name_day">
+                                <a>Sophia Anderson</a>
+                                <a> 5 j <i class="fa-solid fa-earth-americas"></i></a>
+                            </div>
+                        </div>
+        
+                        <div class="post_ellipse_close">
+                            <div><i class="fa-solid fa-ellipsis"></i></div>
+                            
+                        </div>
+        
+                    </div>
+        
+                    <p class="post-text"> 
+                        Lorem Ipsum est tout simplement un faux texte de l’industrie 
+                        de l’imprimerie et de la composition. Lorem Ipsum est le texte 
+                        factice standard de l'industrie depuis les années 1500, lorsqu'un 
+                        imprimeur inconnu a pris une galerie de caractères et l'a brouillée 
+                        pour en faire un livre de spécimens de caractères.
+                        
+                    </p>
+                    
+                    <img src="images/post-2.png">
+        
+                    <div class="post_liker_comment">
+        
+                        <div class="liker">
+                            <img src="images/like-blue.png">
+                            <img src="images/coeur-rouge-1.png">
+                            <span>  4 k</span>
+                        </div>
+        
+                        <div class="comments_shares">
+                            <span class="comments">237 commentaires</span>
+                            <span class="shares">128 partages</span>
+                        </div>
+                        
+                    </div>
+        
+                    <div class="share_like__comment">
+                        <a class="like"><img src="images/like.png"> J'aime</a>
+                        <a href="#modal_1" class="comment"><img src="images/comments.png"> Commenter</a>
+                        <a class="share"><img src="images/share.png"> Partager</a>
+                    </div>
+    
+                    <div class="all_comments">
+    
+                        <div class="all_comments_level_1">
+                            
+                            <div class="describe">
+                                <img src="images/member-1.png">
+                                <div>
+                                    <h3>Olivia Johnson</h3>
+                                    <p>Lorem Ipsum est tout simplement un faux texte de l’industrie 
+                                    de l’imprimerie et de la composition.</p>
+                                </div>
+                                
+                            </div>
+    
+    
+                            <div class="all_comments_level_2">
+                                <div class="describe">
+                                    <img src="images/member-2.png">
+                                    <div>
+                                        <h3>Lucas Miller</h3>
+                                        <p>Lorem Ipsum est tout simplement un faux texte de l’industrie 
+                                        de l’imprimerie et de la composition.</p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+    
+    
+                        </div>
+    
+                        <div class="all_comments_level_1">
+                            
+                            <div class="describe">
+                                <img src="images/member-1.png">
+                                <div>
+                                    <h3>Olivia Johnson</h3>
+                                    <p>Lorem Ipsum est tout simplement un faux texte de l’industrie 
+                                    de l’imprimerie et de la composition.</p>
+                                </div>
+                                
+                            </div>
+    
+    
+                            <div class="all_comments_level_2">
+                                <div class="describe">
+                                    <img src="images/member-2.png">
+                                    <div>
+                                        <h3>Lucas Miller</h3>
+                                        <p>Lorem Ipsum est tout simplement un faux texte de l’industrie 
+                                        de l’imprimerie et de la composition.</p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+    
+    
+                        </div>
+    
+                        <div class="all_comments_level_1">
+                            
+                            <div class="describe">
+                                <img src="images/member-1.png">
+                                <div>
+                                    <h3>Olivia Johnson</h3>
+                                    <p>Lorem Ipsum est tout simplement un faux texte de l’industrie 
+                                    de l’imprimerie et de la composition.</p>
+                                </div>
+                                
+                            </div>
+    
+    
+                            <div class="all_comments_level_2">
+                                <div class="describe">
+                                    <img src="images/member-2.png">
+                                    <div>
+                                        <h3>Lucas Miller</h3>
+                                        <p>Lorem Ipsum est tout simplement un faux texte de l’industrie 
+                                        de l’imprimerie et de la composition.</p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+    
+    
+                        </div>
+    
+    
+    
+                    </div>
+    
+                </div>
+    
+    
+                <div class="comments_post">
+                            
+                    <div class="describe_1">
+                        <img src="images/profile_pic_2.png">
+                        <div>
+                            <textarea ></textarea>
+                            <img class="plane" src="images/plane.jpg">
+                        </div>
+                        
+                    </div>
+        
+                </div>
+    
+            </div>
+    
+        </div>
+    
+        <!-------------------------fin Boîte de dialogue                   ---------------------->
+    
+
 </body>
 </html>
