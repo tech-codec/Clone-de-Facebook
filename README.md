@@ -1,4 +1,5 @@
 # Clone-de-Facebook
+c'est un projet réalisé avec HTML, CSS et JavaScript.
 
 ![face_clone_laptop](https://github.com/tech-codec/Clone-de-Facebook/assets/72146213/66f272ff-843b-48f4-8b23-c2111b6d9e97)
 ![face_clone_mobile](https://github.com/tech-codec/Clone-de-Facebook/assets/72146213/51146326-faee-4ffc-a2c3-e7e912cd4c8c)
